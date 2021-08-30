@@ -17,26 +17,25 @@ const TodoFormComponent: FC<TodoFormProps> = ({
 	console.log(editMode);
 
 	return (
-		// <Formik
-		// 	initialValues={editMode ? todoData : initialValues}
-		// 	onSubmit={onSubmit}
-		// 	validateOnChange
-		// >
-		// 	{({ handleSubmit, handleChange, values }) => (
-		// 		<Form onSubmit={handleSubmit} noValidate>
-		// 			<Input
-		// 				label="Add Todo"
-		// 				id="todo"
-		// 				inputName="todo"
-		// 				type="text"
-		// 				onChange={handleChange}
-		// 				value={values.todo}
-		// 			/>
-		// 			<Button type="submit">Add Todo</Button>
-		// 		</Form>
-		// 	)}
-		// </Formik>
-		<>adasd</>
+		<Formik
+			initialValues={editMode ? todoData : initialValues}
+			onSubmit={onSubmit}
+			validateOnChange
+		>
+			{({ handleSubmit, handleChange, values }) => (
+				<Form onSubmit={handleSubmit} noValidate>
+					<Input
+						label="Add Todo"
+						id="todo"
+						inputName="todo"
+						type="text"
+						onChange={handleChange}
+						value={values.todo}
+					/>
+					<Button type="submit">Add Todo</Button>
+				</Form>
+			)}
+		</Formik>
 	);
 };
 
